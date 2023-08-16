@@ -2,9 +2,12 @@ import React from 'react';
 import axios from 'axios';
 import '../styles.css';
 
+  // const url = 'http://localhost:5000/'; //For local host
+  const url = 'https://finalexamapi-rus0.onrender.com' //For render.com
+
 function BookCard({ book, onDelete }) {
   const handleDelete = () => {
-    axios.delete(`http://localhost:5000/${book._id}`)
+    axios.delete(`${url}${book._id}`)
       .then(() => {
         onDelete(book._id); // Update local state to remove the deleted book
       })
@@ -33,5 +36,3 @@ function BookCard({ book, onDelete }) {
 }
 
 export default BookCard;
-
-

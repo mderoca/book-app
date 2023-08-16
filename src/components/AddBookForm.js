@@ -6,16 +6,16 @@ function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [description, setDescription] = useState('');
+  // const url = 'http://localhost:5000/'; //For local host
+  const url = 'https://finalexamapi-rus0.onrender.com' //For render.com
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newBook = { title, author, description };
 
-    axios.post('http://localhost:5000/', newBook)
+    axios.post(url, newBook)
       .then((res) => {
         console.log('Book added:', res.data);
-        // Redirect to BookList after successful submission
-        // You can use react-router-dom's history.push('/book-list') here
       })
       .catch((err) => {
         console.error('Error adding book:', err);

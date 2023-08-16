@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import BookCard from './BookCard';
 import '../styles.css';
 
+  // const url = 'http://localhost:5000/'; //For local host
+  const url = 'https://finalexamapi-rus0.onrender.com' //For render.com
+
 function BookList() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/')
+    axios.get(url)
       .then((res) => {
         setBooks(res.data);
       })
