@@ -5,7 +5,7 @@ import BookCard from './BookCard';
 import '../styles.css';
 
   // const url = 'http://localhost:5000/'; //For local host
-  const url = 'https://finalexamapi-rus0.onrender.com' //For render.com
+  const url = 'https://finalexamapi-rus0.onrender.com/' //For render.com
 
 function BookList() {
   const [books, setBooks] = useState([]);

@@ -7,7 +7,7 @@ function AddBook() {
   const [author, setAuthor] = useState('');
   const [description, setDescription] = useState('');
   // const url = 'http://localhost:5000/'; //For local host
-  const url = 'https://finalexamapi-rus0.onrender.com' //For render.com
+  const url = 'https://finalexamapi-rus0.onrender.com/' //For render.com
 
   const handleSubmit = (e) => {
     e.preventDefault();
